@@ -11,7 +11,7 @@ const mongoDBPath = "mongodb+srv://pratik:test1234@noteapp.r5v9qa0.mongodb.net/n
 mongoose.connect(mongoDBPath)
     .then(function() {
         app.get("/", function(req, res) {
-            const response = { message: "API Works!" };
+            const response = { statusCode: res.statusCode, message: "API Works!" };
             res.json(response);
         });
 
